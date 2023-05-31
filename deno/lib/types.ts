@@ -426,7 +426,7 @@ export abstract class ZodType<
     this.isOptional = this.isOptional.bind(this);
   }
 
-  getMetadata(): Def["metadata"] {
+  getMetadata(): this["_def"]["metadata"] {
     if (this._def.metadata) return this._def.metadata;
     return undefined;
   }
